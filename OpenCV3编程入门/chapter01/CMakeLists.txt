@@ -1,8 +1,8 @@
-# ake needs this line
+# CMake needs this line
 cmake_minimum_required(VERSION 2.8)
 
 # Define project name
-project(chapter2)
+project(chapter01)
 
 # Find OpenCV, you may need to set OpenCV_DIR variable
 # to the absolute path to the directory containing OpenCVConfig.cmake file
@@ -26,11 +26,23 @@ endif()
 # Declare the executable target built from your sources
 # Link your application with OpenCV libraries
 
-add_executable(cam_shift_demo cam_shift_demo.cc)
-target_link_libraries(cam_shift_demo ${OpenCV_LIBS})
+add_executable(hello_opencv hello_opencv.cc)
+target_link_libraries(hello_opencv ${OpenCV_LIBS})
 
-add_executable(lk_demo lk_demo.cc)
-target_link_libraries(lk_demo ${OpenCV_LIBS})
+add_executable(erode erode.cc)
+target_link_libraries(erode ${OpenCV_LIBS})
 
-add_executable(object_detec object_detec.cc)
-target_link_libraries(object_detec ${OpenCV_LIBS})
+add_executable(blur blur.cc)
+target_link_libraries(blur ${OpenCV_LIBS})
+
+add_executable(canny canny.cc)
+target_link_libraries(canny ${OpenCV_LIBS})
+
+add_executable(video video.cc)
+target_link_libraries(video ${OpenCV_LIBS})
+
+add_executable(camera camera.cc)
+target_link_libraries(camera ${OpenCV_LIBS})
+
+add_executable(canny_camera canny_camera.cc)
+target_link_libraries(canny_camera ${OpenCV_LIBS})
